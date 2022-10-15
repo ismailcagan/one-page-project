@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en">
+<!-- 127.0.0.1:5501/WebContent/index.htm -->
+
+<head>
+    <title>JavaScript course | One page</title>
+    <!-- favicon-->
+    <link rel="icon" href="image/ortahisar-5678553_1920.jpg" type="/image/x-icon" />
+
+    <!-- turkce karakter -->
+    <meta charset="utf-8" />
+
+    <!-- seo optimization-->
+    <meta name="keywords" content="html5,css3,js,jquery,bootstrap,Responsive,TypeScript" />
+    <meta name="author" content="hamitmizrak@gmail.com" />
+
+    <!-- responsive icin-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome   -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- External Css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- External Js -->
+    <script src="js/template.js"></script>
+
+
+    <style>
+        #feedback {
+            font-size: 1.4em;
+        }
+
+        #selectable .ui-selecting {
+            background: #FECA40;
+        }
+
+        #selectable .ui-selected {
+            background: #F39814;
+            color: white;
+        }
+
+        #selectable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+        }
+
+        #selectable li {
+            margin: 3px;
+            padding: 0.4em;
+            font-size: 1.4em;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body id="body_header">
+    <!-- body start-->
+    <a id="back_to_top" href="#body_header"><i class="fas fa-arrow-up mr-2"></i>Top</a>
+
+    <!--menu alanı : logo,menu-->
+    <!-- nav start-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            LOGO
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#product">Ürünler</a>
+                        <a class="dropdown-item" href="#aboutme">Hakkımızda</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#s_s_s">SSS</a>
+                        <a class="dropdown-item" href="#concat_modal">iletişim</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#product">Ürünler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#aboutme">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#s_s_s">SSS</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#concat_modal">
+                        <i class="far fa-id-card"></i> iletişim</button>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="tags">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <nav>
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-2 float-left">
+                    <div id="logo">
+                        <a href="#" class="ecodation">
+                            <img src="image/ecodation.png" id="logo_ecodation" alt="ecodation" width="50" height="50">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-10 clearfix ">
+                    <div id="menu" class="center44">
+                        <ul class="uppercase" style="margin-top:2.4rem">
+                            <li id="bar_icon" class="menu-item"> <a href="#"> <i class="fas fa-bars"></i> </a> </li>
+                            <li class="menu-item"> <a href="#"> <i class="fas fa-home"></i> Anasayfa</a> </li>
+                            <li class="menu-item"> <a href="#product"><i class="fas fa-user-check"></i>Ürünler</a> </li>
+                            <li class="menu-item"> <a href="#aboutme"><i class="fas fa-newspaper"></i>Hakkımızda</a>
+                            </li>
+                            <li class="menu-item"> <a href="#s_s_s"><i class="far fa-id-card"></i>S.S.S</a> </li> 
+                            <li class="menu-item">
+                                <a href="#">To-Do</a>
+                            </li>  
+                            <li class="menu-item">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#concat_modal">
+                                    <i class="far fa-id-card"></i> iletişim</button>
+                            </li>
+                            <li class="menu-item" id="search_id">
+                                <form class="d-flex">
+                                    <input id="tags" class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav finish-->
+
+    <!--header alanı-->
+    <!--  header start-->
+    
+    <header>
+        <div id="header_image"></div>
+
+        </div>
+        <div id="header_top">
+            <div id="header_text">
+                <h1 class="uppercase " id="header_h1">Ecodation JavaScript One Page Project </h1>
+                <hr class="hr44" style="color:white!important;">
+                <p style="margin-bottom:2rem;" id="header_p">Html5 ,Css3 ,Js ,Jquery,Bootstrap</p>
+                <a id="header_a" href="https://egitim.ecodation.com/" target="_blank">Details</a>
+            </div>
+    </header>
+
+    <!-- header finish-->
+
+
+    <!-- breadcrump start-->
+    <!-- bootstrap :breadcrumb-->
+    <!-- <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="#">Bread Crumb</a>
+        <a class="breadcrumb-item" href="#">Home</a>
+        <span class="breadcrumb-item active">Ürün</span>
+    </nav> -->
+    <!-- breadcrump finish-->
+
+
+    <!--body alanı-->
+    <!-- main start-->
+    <div class="container">
+        <main>
+
+            <section id="slider" style="margin-top:20rem;">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="image/background-5060836_1920.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="image/canal-3897510_1920.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="image/coffee-6464307_1920.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </section>
+
+            <section id="services" style="margin-top:10rem;">
+                <div class="alert alert-primary" role="alert">
+                    <a href="#" class="alert-link">
+                        <h3 class="text-center44 uppercase mt44">Services(Hizmetler)</h3>
+                    </a>
+                </div>
+                <hr class="hr44">
+                <div class="row">
+
+                    <p class="text-justify mb-5 mt-3 ml-4 mr-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ab minima
+                        debitis hic animi quis similique inventore delectus tenetur qui eaque aliquam aspernatur,
+                        voluptate reiciendis molestiae odio neque magni necessitatibus asperiores sint nihil molestias
+                        expedita. Fuga, eum nam minima possimus excepturi odio delectus tempora asperiores et quam
+                        blanditiis suscipit voluptatibus nihil rem repellendusFuga, eum nam minima possimus excepturi
+                        odio delectus tempora asperiores et quam blanditiis suscipit voluptatibus nihil rem
+                        repellendusFuga, eum nam minima possimus excepturi odio delectus tempora asperiores et quam
+                        blanditiis suscipit voluptatibus nihil rem repellendus</p>
+
+                    <div class="  col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="  col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="  col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="  col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="  col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-sm-6 col-md-4 col-lg-3 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <i class="fas fa-cannabis"></i>
+                                </div>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- product -->
+            <div class="container">
+                <section id="product" style="margin-top:-1rem;" class="clearfix">
+                    <!-- bootstrap :alert-->
+
+
+
+                    <div class="alert alert-primary" role="alert">
+                        <a href="#" class="alert-link">
+                            <h3 class="text-center44 uppercase mt44">Ürünler</h3>
+                        </a>
+                    </div>
+
+                    <div class="product_sub">
+                        <hr class="hr44">
+                        <div>
+                            <h3 class="text-center44 lowercase text-muted44">Laptop Xl75</h3>
+                            <div>
+                                <img src="image/ortahisar-5678553_1920.jpg" alt="">
+                            </div>
+                            <p class="line-clamp-4 justify44">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptas
+                                nesciunt
+                                laudantium voluptate, minima quo assumenda cumque doloremque architecto ab molestiae in
+                                modi.
+                                Quisquam commodi quia aspernatur dolorem ab? Assumenda, temporibus!
+                                Modi odit quaerat perferendis magnam, fugit rerum corporis iste deserunt laboriosam cum
+                                repudiandae
+                                fugiat possimus ab maxime, dicta, veritatis excepturi laborum earum dignissimos ipsa.
+                                Sed ipsa
+                                magnam commodi sunt eum!
+                                Sunt eius accusamus id, quia inventore provident saepe blanditiis iste tempora
+                                dignissimos. Rem
+                                atque, voluptate dolorum commodi eius iste molestias magnam deleniti provident
+                                accusantium
+                                libero
+                                harum debitis error cumque odio!
+                                Magni cupiditate modi dolore vel eligendi. Libero dolorum, minus ullam atque doloremque
+                                quo
+                                aliquid,
+                                possimus adipisci eaque ipsa accusantium maiores. Recusandae eligendi velit cupiditate
+                                vel id
+                                mollitia nihil totam! Ex!
+                                Tempora atque veniam reprehenderit libero sit blanditiis molestiae numquam obcaecati
+                                enim, magni
+                                maiores incidunt quo nisi nemo minus ex hic itaque deserunt magnam! Et asperiores, vel
+                                blanditiis
+                                nisi dolor id.</p>
+                        </div>
+                    </div>
+
+                    <div class="product_sub">
+                        <h3 class="text-center44 lowercase text-muted44">Lenovo 84asd</h3>
+                        <div>
+                            <img src="image/background-5060836_1920.jpg" alt="">
+                        </div>
+                        <p class="line-clamp-4 justify44">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptas
+                            nesciunt
+                            laudantium voluptate, minima quo assumenda cumque doloremque architecto ab molestiae in
+                            modi.
+                            Quisquam commodi quia aspernatur dolorem ab? Assumenda, temporibus!
+                            Modi odit quaerat perferendis magnam, fugit rerum corporis iste deserunt laboriosam cum
+                            repudiandae
+                            fugiat possimus ab maxime, dicta, veritatis excepturi laborum earum dignissimos ipsa. Sed
+                            ipsa
+                            magnam commodi sunt eum!
+                            Sunt eius accusamus id, quia inventore provident saepe blanditiis iste tempora dignissimos.
+                            Rem
+                            atque, voluptate dolorum commodi eius iste molestias magnam deleniti provident accusantium
+                            libero
+                            harum debitis error cumque odio!
+                            Magni cupiditate modi dolore vel eligendi. Libero dolorum, minus ullam atque doloremque quo
+                            aliquid,
+                            possimus adipisci eaque ipsa accusantium maiores. Recusandae eligendi velit cupiditate vel
+                            id
+                            mollitia nihil totam! Ex!
+                            Tempora atque veniam reprehenderit libero sit blanditiis molestiae numquam obcaecati enim,
+                            magni
+                            maiores incidunt quo nisi nemo minus ex hic itaque deserunt magnam! Et asperiores, vel
+                            blanditiis
+                            nisi dolor id.</p>
+                    </div>
+
+                    <div class="product_sub">
+                        <h3 class="text-center44 lowercase text-muted44">Samsung Xl75</h3>
+                        <div>
+                            <img src="image/canal-3897510_1920.jpg" alt="">
+                        </div>
+                        <p class="line-clamp-4 justify44">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptas
+                            nesciunt
+                            laudantium voluptate, minima quo assumenda cumque doloremque architecto ab molestiae in
+                            modi.
+                            Quisquam commodi quia aspernatur dolorem ab? Assumenda, temporibus!
+                            Modi odit quaerat perferendis magnam, fugit rerum corporis iste deserunt laboriosam cum
+                            repudiandae
+                            fugiat possimus ab maxime, dicta, veritatis excepturi laborum earum dignissimos ipsa. Sed
+                            ipsa
+                            magnam commodi sunt eum!
+                            Sunt eius accusamus id, quia inventore provident saepe blanditiis iste tempora dignissimos.
+                            Rem
+                            atque, voluptate dolorum commodi eius iste molestias magnam deleniti provident accusantium
+                            libero
+                            harum debitis error cumque odio!
+                            Magni cupiditate modi dolore vel eligendi. Libero dolorum, minus ullam atque doloremque quo
+                            aliquid,
+                            possimus adipisci eaque ipsa accusantium maiores. Recusandae eligendi velit cupiditate vel
+                            id
+                            mollitia nihil totam! Ex!
+                            Tempora atque veniam reprehenderit libero sit blanditiis molestiae numquam obcaecati enim,
+                            magni
+                            maiores incidunt quo nisi nemo minus ex hic itaque deserunt magnam! Et asperiores, vel
+                            blanditiis
+                            nisi dolor id.</p>
+                    </div>
+
+                    <div class="product_sub">
+                        <h3 class="text-center44 lowercase text-muted44">msi gl75 Xl75</h3>
+                        <div>
+                            <img src="image/desk-593327_1920.jpg" alt="">
+                        </div>
+                        <p class="line-clamp-4 justify44">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptas
+                            nesciunt
+                            laudantium voluptate, minima quo assumenda cumque doloremque architecto ab molestiae in
+                            modi.
+                            Quisquam commodi quia aspernatur dolorem ab? Assumenda, temporibus!
+                            Modi odit quaerat perferendis magnam, fugit rerum corporis iste deserunt laboriosam cum
+                            repudiandae
+                            fugiat possimus ab maxime, dicta, veritatis excepturi laborum earum dignissimos ipsa. Sed
+                            ipsa
+                            magnam commodi sunt eum!
+                            Sunt eius accusamus id, quia inventore provident saepe blanditiis iste tempora dignissimos.
+                            Rem
+                            atque, voluptate dolorum commodi eius iste molestias magnam deleniti provident accusantium
+                            libero
+                            harum debitis error cumque odio!
+                            Magni cupiditate modi dolore vel eligendi. Libero dolorum, minus ullam atque doloremque quo
+                            aliquid,
+                            possimus adipisci eaque ipsa accusantium maiores. Recusandae eligendi velit cupiditate vel
+                            id
+                            mollitia nihil totam! Ex!
+                            Tempora atque veniam reprehenderit libero sit blanditiis molestiae numquam obcaecati enim,
+                            magni
+                            maiores incidunt quo nisi nemo minus ex hic itaque deserunt magnam! Et asperiores, vel
+                            blanditiis
+                            nisi dolor id.</p>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- about-me -->
+
+            <div class="container">
+                <section id="aboutme" class="clearfix text-muted44" style="margin-top: 2rem;">
+
+                    <div class="alert alert-primary" role="alert">
+                        <a href="#" class="alert-link">
+                            <h3 class="text-center44 uppercase mt44">Hakkımızda</h3>
+                        </a>
+                    </div>
+
+                    <hr class="hr44" />
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 col-lg-6">
+                            <div id="about_left">
+                                <p style="padding:1rem;" class="line-clamp-4 justify44">Lorem ipsum dolor sit amet
+                                    consectetur
+                                    adipisicing elit. Laboriosam culpa illum maiores consectetur
+                                    vel reprehenderit iusto non facilis commodi aut laudantium fugit fugiat, deleniti
+                                    porro
+                                    quisquam
+                                    nisi voluptate ab hic?
+                                    Corrupti illo quisquam sint ex laboriosam placeat odio quae quis fugit, similique,
+                                    sequi
+                                    at
+                                    alias
+                                    voluptates quod quia, voluptatum quidem aspernatur aperiam unde ipsam et. Rem eaque
+                                    at
+                                    aut
+                                    illum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-6">
+                            <div id="about_right">
+                                <p style="padding:1rem;" class="line-clamp-4 justify44">Lorem ipsum dolor sit amet
+                                    consectetur
+                                    adipisicing elit. Laboriosam culpa illum maiores consectetur
+                                    vel reprehenderit iusto non facilis commodi aut laudantium fugit fugiat, deleniti
+                                    porro
+                                    quisquam
+                                    nisi voluptate ab hic?
+                                    Corrupti illo quisquam sint ex laboriosam placeat odio quae quis fugit, similique,
+                                    sequi
+                                    at
+                                    alias
+                                    voluptates quod quia, voluptatum quidem aspernatur aperiam unde ipsam et. Rem eaque
+                                    at
+                                    aut
+                                    illum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- s.s.s -->
+            <div class="container">
+                <section id="s_s_s" class="clearfix" style="margin-top:2rem;">
+                    <div class="alert alert-primary" role="alert">
+                        <a href="#" class="alert-link">
+                            <h3 class="text-center44 uppercase mt44">Sıklıkla Sorulan Sorular</h3>
+                        </a>
+                    </div>
+                    <hr class="hr44">
+            </div>
+            <div id="accordion4">
+                <h3>Html Nedir ?</h3>
+                <div>
+                    <p>
+                        Betik bir dildir Programlama dili değildir.
+                    </p>
+                </div>
+                <h3>Css</h3>
+                <div>
+                    <p>
+                        Css Html taglerini daha güzel göstermek için kullandığımız birimlerdir.
+                    </p>
+                </div>
+                <h3>Responsive Design </h3>
+                <div>
+                    <p>
+                        Bütün cihazlara göre kodlamadır
+                    </p>
+                    <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                    </ul>
+                </div>
+                <h3>Bootstrap</h3>
+                <div>
+                    <p>
+                        Css Frameworkkudur
+                    </p>p
+                </div>
+                <h3>JS</h3>
+                <div>
+                    <p>
+                        Ts ile birlikte bir programlama dilidir. Betik dildir.
+                    </p>
+
+                </div>
+                <h3>jQuery</h3>
+                <div>
+                    <p>
+                        JS'in bir kütüphanesidir.
+                    </p>
+                </div>
+            </div>
+
+            <div id="chooise" class="mt-5 mb-5">
+                <ol id="selectable">
+                    <li class="ui-widget-content">Item 1</li>
+                    <li class="ui-widget-content">Item 2</li>
+                    <li class="ui-widget-content">Item 3</li>
+                    <li class="ui-widget-content">Item 4</li>
+                    <li class="ui-widget-content">Item 5</li>
+                    <li class="ui-widget-content">Item 6</li>
+                    <li class="ui-widget-content">Item 7</li>
+                </ol>
+            </div>
+
+
+            <!-- img-fluid:responsive resim -->
+            <div id="accordianId" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header" role="tab" id="section1HeaderId">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId"
+                                aria-expanded="true" aria-controls="section1ContentId">
+                                Section 1
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+                        <div class="card-body">
+                            Section 1 content
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+    </div>
+
+    <!--DO-TO-->
+<!--
+    <div class="container">
+        <section class="clearfix text-muted44 mt-4 mb-4">
+            <h3 class="text-center44 uppercase mt44">To-Do</h3>
+
+
+    <div class="container p-3">
+        <h1 class="app-title" id="header">to do App</h1>
+        <div class="card">
+            <div class="card-header">
+                New Task
+            </div>
+            <div class="card-body">
+                <form id="addTaskForm">
+                    <div class="input-group mt-3">    
+
+                    <input id="txtTaskName" name="taskName" type="text" class="form-control" placeholder="Type a new task" aria-describedby="btnAddNewTask">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" id="btnAddNewTask">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div> 
+                </form>
+            </div>
+
+
+        </div>
+        <div class="card mt-3">
+            <div class="card-header">
+                Task List
+                <a id="btnDeleteAll" href="#" class="btn btn-outline-danger btn-sm delete-all float-right">
+                    Delete All
+                </a>
+            </div>
+            <ul id="task-list" class="list-group">
+
+            </ul>
+        </div>
+
+    </div>
+
+        </section>
+    </div>
+      
+      
+      
+      -->
+      
+      
+      
+      
+
+
+
+
+    <!-- google -->
+    <div class="container">
+        <section class="clearfix">
+            <div class="alert alert-primary" role="alert">
+                <a href="#" class="alert-link">
+                    <h3 class="text-center44 uppercase mt44">Google Maps</h3>
+                </a>
+            </div>
+
+            <div class="row">
+                <div class="mapouter">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="gmap_canvas"><iframe width="100%" height="600" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 800px;
+                                    width: 100%;
+                                }
+                            </style>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 800px;
+                                    width: 100%;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- <div style="margin-top:5rem;" class="alert alert-primary" role="alert">
+            <a href="#" class="alert-link">
+                <h3 class="text-center44 uppercase mt44">Bootstrap</h3>
+            </a>
+        </div>
+        <section id="tooltip-9">
+            <div class="conttainer">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true"
+                    title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+                    Tooltip with HTML
+                </button>
+            </div>
+
+        </section>
+
+        <section id="b_list" style="margin-top:5rem; margin-bottom:5rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ul class="list-group">
+                            <li class="list-group-item active">Active item</li>
+                            <li class="list-group-item">Item</li>
+                            <li class="list-group-item disabled">Disabled item</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list-group">
+                            <li class="list-group-item active">Active item</li>
+                            <li class="list-group-item">Item</li>
+                            <li class="list-group-item disabled">Disabled item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+    <!-- <div class="container-fluid"> -->
+    <!-- <section id="b_table">
+            <div class="container">
+                <div class="row">
+                   
+                    <table class="table table-dark table-striped table-bordered table-hover table-sm ">
+                        <thead>
+                            <tr class="bg-primary">
+                                <td>S.N</td>
+                                <td>Front-End</td>
+                                <td>Back-End</td>
+                                <td>Database</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td rowspan="2">
+                                    <div style="position:relative; margin-top:20px; margin-left:50%;">Html5</div>
+                                </td>
+                                <td>Java se</td>
+                                <td>Sql</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td colspan="2">Javaee</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>js</td>
+                                <td>Java me</td>
+                                <td>Mssql</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>&copy;</td>
+                                <td>Bütün hakları sakladır.</td>
+                                <td>&reg;</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section> -->
+
+    <!-- img-fluid:responsive resim -->
+    <!-- <section id="img-6">
+            <div class="container">
+             
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <img class="  img-fluid img-thumbnail rounded-circle" src="image/desk-593327_1920.jpg" alt="">
+
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    </div>
+    <!-- main finish-->
+
+    <!--footer alanı-->
+    <!-- footer start-->
+    <br>
+    <footer class="clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div style="margin-top:2rem">
+                        <h4 id="dateId"></h4>
+                        <button class="common_button" id="ios"><i class="fab fa-apple text-warning"></i>IOS</button>
+                        <button class="common_button" id="adroid"><i
+                                class="fab fa-android text-danger"></i>Android</button>
+
+                        <button class="common_button bg-dark text-white" onclick="dateShow()"><i
+                                class="fab fa-android "></i>Tarihi Göster</button>
+                    </div>
+
+                    <address style="margin-top:2rem">
+                        <p>
+                            <a class="btn btn-danger" href="#"><i class="far fa-life-ring"></i>Destek</a>
+                            <a class="btn btn-secondary" href="mailto:hamitmizrak@gmail.com"><i
+                                    class="fas fa-mail-bulk"></i>Gmail</a>
+                            <a class="btn btn-info" href="tel:+90 555 22 11 00"><i class="fas fa-phone"></i>Tel</a>
+                        </p>
+                    </address>
+                </div>
+                <div class="col-sm-12 col-md-6">
+
+                    <h3 class="text-center"></h3>Email </h3>
+
+                    <form action="index.htm" method="GET">
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-dark text-white" placeholder="adınız soyadınız" 
+                                id="adinizSoyadiniz" class="adiniz" />
+                            <span id="validation_adiniz" class="text-danger" > </span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-dark text-white" placeholder="emailiniz"
+                                id="email" class="email" />
+                            <span id="validation_emailiniz" class="text-danger" />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-dark text-white" placeholder="telefonunuz"
+                                id="telefonunuz" class="email" />
+                            <span id="validation_telefonunuz" class="text-danger" />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-dark text-white" placeholder="tarih"
+                                required="true" id="tarih" class="email" />
+                        </div>
+
+                        <input type="reset" value="Temizle" class="btn btn-danger">
+                        <input id="btnSubmit" type="submit" value="Gönder" class="btn btn-primary">
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+    <div class="container-fluid44" id="allRezer">
+        <p><span style="background-color: blueviolet; color:white;">&copy; Bütün Haklar saklıdır.</span> </p>
+    </div>
+    <!-- footer finish-->
+
+
+
+    <div class="modal fade" id="concat_modal">
+        <div class="modal-dialog modal-dialog-center ">
+            
+            <!--modal-sm -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <h6 class=" text-primary text-capitalize" style="text-align: center;">iletişim
+                        </h6>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    <h6 class=" text-primary text-capitalize" style="text-align: center;">iletişim için bize yazınız
+                    </h6>
+                    <form action="#" method="GET">
+                        <div class="form-group">
+                            <input type="text" name="adi" id="adi" class="form-control" placeholder="adınızı giriniz"
+                                autofocus="true">
+                        </div>
+                        <div class="form-group"><input type="text" class="form-control" name="soyadi" id="soyadi"
+                                placeholder="soyadınızı giriniz">
+                        </div>
+                        <div class="form-group"><input type="email" class="form-control"
+                                placeholder="email adresinizi giriniz" name="email" id="email"></div>
+                        <div class="form-group"><input type="tel" class="form-control" name="telefon" id="telefon"
+                                placeholder="telefon numaranızı giriniz">
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea class="form-control" cols="60" rows="5"></textarea>
+
+                            <div class="mt-3">
+                                <button type="reset" class="btn btn-danger">Temizle</button>
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" class="close" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--   finish codes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
